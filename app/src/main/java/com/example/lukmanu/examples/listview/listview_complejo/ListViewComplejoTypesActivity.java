@@ -19,7 +19,7 @@ import com.example.lukmanu.examples.eventviews.MyAlertDialog;
 
 import java.util.List;
 
-public class ListView2ComplejoActivity extends Activity implements AdapterView.OnItemClickListener
+public class ListViewComplejoTypesActivity extends Activity implements AdapterView.OnItemClickListener
 {
     private ListView mListView;
 

@@ -14,7 +14,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class ListView2SimpleActivity extends Activity
+public class ListViewSimple2LinesActivity extends Activity
 {
     private ListView mListView;
 

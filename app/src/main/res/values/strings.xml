@@ -5,7 +5,10 @@
     <string name="listview_2_bttn">Ejemplo 2 - Listview Simple - 2 Líneas</string>
     <string name="listview_3_bttn">Ejemplo 3 - Listview Complejo - Custom Adapter</string>
     <string name="listview_4_bttn">Ejemplo 4 - Listview Complejo - Custom Adapter con Tipos</string>
-    <string name="recyclerview_1_bttn">Ejemplo 5 - Recycler View 1</string>
-    <string name="recyclerview_2_bttn">Ejemplo 6 - Recycler View 2</string>
+    <string name="recyclerview_1_bttn">Ejemplo 5 - Recycler View - Simple</string>
+    <string name="recyclerview_2_bttn">Ejemplo 6 - Recycler View - Con Tipos</string>
+    <string name="recyclerview_3_bttn">Ejemplo 7 - Recycler View - Con Click</string>
+    <string name="recyclerview_4_bttn">Ejemplo 8 - Recycler View - Con Click y Background</string>
+    <string name="recyclerview_5_bttn">Ejemplo 9 - Recycler View - Grid Layout</string>
 
 </resources>
