@@ -40,14 +40,42 @@
             android:id="@+id/bttn_4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/recyclerview_1_bttn"
+            android:text="@string/listview_4_bttn"
             />
 
         <Button
             android:id="@+id/bttn_5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="@string/recyclerview_1_bttn"
+            />
+
+        <Button
+            android:id="@+id/bttn_6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:text="@string/recyclerview_2_bttn"
+            />
+
+        <Button
+            android:id="@+id/bttn_7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/recyclerview_3_bttn"
+            />
+
+        <Button
+            android:id="@+id/bttn_8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/recyclerview_4_bttn"
+            />
+
+        <Button
+            android:id="@+id/bttn_9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/recyclerview_5_bttn"
             />
 
     </LinearLayout>
