@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">ListviewExample</string>
+
+    <string name="listview_1_bttn">Ejemplo 1 - Listview Simple 1</string>
+    <string name="listview_2_bttn">Ejemplo 2 - Listview Simple 2</string>
+    <string name="listview_3_bttn">Ejemplo 3 - Listview Complejo</string>
+    <string name="recyclerview_1_bttn">Ejemplo 4 - Recycler View 1</string>
+    <string name="recyclerview_2_bttn">Ejemplo 5 - Recycler View 2</string>
+
 </resources>
