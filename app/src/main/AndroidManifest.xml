@@ -17,8 +17,14 @@
         </activity>
 
         <activity android:name=".listview.listview_simple.ListViewSimpleActivity"/>
-        <activity android:name=".listview.listview_simple.ListView2SimpleActivity"/>
+        <activity android:name=".listview.listview_simple.ListViewSimple2LinesActivity"/>
         <activity android:name=".listview.listview_complejo.ListViewComplejoActivity"/>
+        <activity android:name=".listview.listview_complejo.ListViewComplejoTypesActivity"/>
+        <activity android:name=".recyclerview.ejemplo2.RecyclerViewActivity"/>
+        <activity android:name=".recyclerview.ejemplo1.RecyclerViewActivity"/>
+        <activity android:name=".recyclerview.ejemplo3.RecyclerViewActivity"/>
+        <activity android:name=".recyclerview.ejemplo4.RecyclerViewActivity"/>
+        <activity android:name=".recyclerview.ejemplo5.RecyclerViewActivity"/>
     </application>
 
 </manifest>

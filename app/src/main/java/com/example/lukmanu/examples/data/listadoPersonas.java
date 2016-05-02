@@ -1,6 +1,7 @@
 package com.example.lukmanu.examples.data;
 
 import com.example.lukmanu.examples.datamodel.personas.Persona;
+import com.example.lukmanu.examples.datamodel.personas.Profesor;
 
 import java.util.ArrayList;
 
@@ -34,10 +35,18 @@ public class ListadoPersonas
         Persona persona;
         for (int i = 1; i < 51; i++)
         {
-            persona = new Persona();
-            persona.setNombre("Nombre " + i);
-            persona.setIdUsuario("IdUsuario " + i);
+            if (i % 10 == 0)
+            {
+                persona = new Profesor();
+                ((Profesor) persona).setAsignatura("Asignatura " + i);
+                persona.setNombre("Profesor " + i);
+            } else
+            {
+                persona = new Persona();
+                persona.setNombre("Nombre " + i);
+            }
 
+            persona.setIdUsuario("IdUsuario " + i);
             personaArrayList.add(persona);
         }
     }
