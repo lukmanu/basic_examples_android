@@ -8,4 +8,23 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="listView">
+        <item name="android:textColor">@color/black</item>
+
+    </style>
+
+    <style name="listView.nombre">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="listView.idUsuario">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="listView.asignatura">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/grey</item>
+    </style>
+
 </resources>

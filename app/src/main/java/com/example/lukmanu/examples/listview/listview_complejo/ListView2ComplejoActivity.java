@@ -14,11 +14,12 @@ import android.widget.TextView;
 import com.example.lukmanu.examples.R;
 import com.example.lukmanu.examples.data.ListadoPersonas;
 import com.example.lukmanu.examples.datamodel.personas.Persona;
+import com.example.lukmanu.examples.datamodel.personas.Profesor;
 import com.example.lukmanu.examples.eventviews.MyAlertDialog;
 
 import java.util.List;
 
-public class ListViewComplejoActivity extends Activity implements AdapterView.OnItemClickListener
+public class ListView2ComplejoActivity extends Activity implements AdapterView.OnItemClickListener
 {
     private ListView mListView;
 
@@ -49,12 +50,26 @@ public class ListViewComplejoActivity extends Activity implements AdapterView.On
 
     private class MyAdapter extends ArrayAdapter<Persona>
     {
+        private static final int TYPE_PROFESOR = 1;
+
         public MyAdapter(Context context, int resource, List<Persona> objects)
         {
             super(context, resource, objects);
         }
+
         @Override
         public View getView(int position, View convertView, ViewGroup parent)
+        {
+            switch (getItemViewType(position))
+            {
+                case TYPE_PROFESOR:
+                    return getViewProfesor(position, convertView, parent);
+                default:
+                    return getViewPersona(position, convertView, parent);
+            }
+        }
+
+        private View getViewPersona(int position, View convertView, ViewGroup parent)
         {
             if (convertView == null)
                 convertView = View.inflate(getContext(), R.layout.listview_item, null);
@@ -62,10 +77,43 @@ public class ListViewComplejoActivity extends Activity implements AdapterView.On
             TextView nombreTV = (TextView) convertView.findViewById(R.id.nombre);
             TextView idUsuarioTV = (TextView) convertView.findViewById(R.id.idUsuario);
 
-            nombreTV.setText(getItem(position).getNombre());
-            idUsuarioTV.setText(getItem(position).getIdUsuario());
+            Persona persona = getItem(position);
+            nombreTV.setText(persona.getNombre());
+            idUsuarioTV.setText(persona.getIdUsuario());
 
             return convertView;
+        }
+
+        private View getViewProfesor(int position, View convertView, ViewGroup parent)
+        {
+            if (convertView == null)
+                convertView = View.inflate(getContext(), R.layout.listview_2_item, null);
+
+            TextView nombreTV = (TextView) convertView.findViewById(R.id.nombre);
+            TextView idUsuarioTV = (TextView) convertView.findViewById(R.id.idUsuario);
+            TextView asignatura = (TextView) convertView.findViewById(R.id.asignatura);
+
+            Profesor profesor = (Profesor) getItem(position);
+
+            nombreTV.setText(profesor.getNombre());
+            idUsuarioTV.setText(profesor.getIdUsuario());
+            asignatura.setText(profesor.getAsignatura());
+
+            return convertView;
+        }
+
+        @Override
+        public int getViewTypeCount()
+        {
+            return 2;
+        }
+
+        @Override
+        public int getItemViewType(int position)
+        {
+            if (getItem(position) instanceof Profesor)
+                return TYPE_PROFESOR;
+            return super.getItemViewType(position);
         }
     }
 }

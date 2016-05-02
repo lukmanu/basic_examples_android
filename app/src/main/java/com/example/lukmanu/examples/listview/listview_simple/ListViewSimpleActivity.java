@@ -16,7 +16,7 @@ public class ListViewSimpleActivity extends Activity
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_listview_simple);
+        setContentView(R.layout.activity_listview);
         mListView = (ListView) findViewById(R.id.lista);
 
         populate();

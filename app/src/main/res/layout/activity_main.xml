@@ -40,7 +40,7 @@
             android:id="@+id/bttn_4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/recyclerview_1_bttn"
+            android:text="@string/listview_4_bttn"
             />
 
         <Button

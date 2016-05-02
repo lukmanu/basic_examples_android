@@ -19,6 +19,7 @@
         <activity android:name=".listview.listview_simple.ListViewSimpleActivity"/>
         <activity android:name=".listview.listview_simple.ListView2SimpleActivity"/>
         <activity android:name=".listview.listview_complejo.ListViewComplejoActivity"/>
+        <activity android:name=".listview.listview_complejo.ListView2ComplejoActivity"/>
     </application>
 
 </manifest>
