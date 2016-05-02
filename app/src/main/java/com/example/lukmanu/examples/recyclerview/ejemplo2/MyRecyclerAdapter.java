@@ -34,15 +34,14 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position)
     {
+        Persona persona = items.get(position);
         if (getItemViewType(position) == TYPE_PROFESOR)
         {
-            Profesor profesor = (Profesor) items.get(position);
-            ((MyViewHolderProfesor) holder).nombre.setText(profesor.getNombre());
-            ((MyViewHolderProfesor) holder).idUsuario.setText(profesor.getIdUsuario());
-            ((MyViewHolderProfesor) holder).asignatura.setText(profesor.getAsignatura());
+            ((MyViewHolderProfesor) holder).nombre.setText(persona.getNombre());
+            ((MyViewHolderProfesor) holder).idUsuario.setText(persona.getIdUsuario());
+            ((MyViewHolderProfesor) holder).asignatura.setText(((Profesor) persona).getAsignatura());
         } else
         {
-            Persona persona = items.get(position);
             ((MyViewHolderPersona) holder).nombre.setText(persona.getNombre());
             ((MyViewHolderPersona) holder).idUsuario.setText(persona.getIdUsuario());
         }
