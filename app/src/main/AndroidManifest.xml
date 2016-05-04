@@ -25,6 +25,8 @@
         <activity android:name=".recyclerview.ejemplo3.RecyclerViewActivity"/>
         <activity android:name=".recyclerview.ejemplo4.RecyclerViewActivity"/>
         <activity android:name=".recyclerview.ejemplo5.RecyclerViewActivity"/>
+        <activity android:name=".sharedpreferences.SharedPreferencesActivity"/>
+        <activity android:name=".database.DatabaseActivity"/>
     </application>
 
 </manifest>
