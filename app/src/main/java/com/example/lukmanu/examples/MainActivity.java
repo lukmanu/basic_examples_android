@@ -5,11 +5,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.lukmanu.examples.database.DatabaseActivity;
 import com.example.lukmanu.examples.listview.listview_complejo.ListViewComplejoTypesActivity;
 import com.example.lukmanu.examples.listview.listview_complejo.ListViewComplejoActivity;
 import com.example.lukmanu.examples.listview.listview_simple.ListViewSimple2LinesActivity;
 import com.example.lukmanu.examples.listview.listview_simple.ListViewSimpleActivity;
 import com.example.lukmanu.examples.recyclerview.ejemplo2.RecyclerViewActivity;
+import com.example.lukmanu.examples.sharedpreferences.SharedPreferencesActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener
 {
@@ -46,6 +48,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (v != null)
             v.setOnClickListener(this);
         v = findViewById(R.id.bttn_9);
+        if (v != null)
+            v.setOnClickListener(this);
+        v = findViewById(R.id.bttn_10);
+        if (v != null)
+            v.setOnClickListener(this);
+        v = findViewById(R.id.bttn_11);
         if (v != null)
             v.setOnClickListener(this);
     }
@@ -85,11 +93,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.bttn_9:
                 intent = new Intent(this, com.example.lukmanu.examples.recyclerview.ejemplo5.RecyclerViewActivity.class);
                 break;
+            case R.id.bttn_10:
+                intent = new Intent(this, SharedPreferencesActivity.class);
+                break;
+            case R.id.bttn_11:
+                intent = new Intent(this, DatabaseActivity.class);
+                break;
             default:
                 intent = new Intent(this, ListViewSimpleActivity.class);
                 break;
         }
-
         startActivity(intent);
     }
 }
