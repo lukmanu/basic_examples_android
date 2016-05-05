@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.IBinder;
 import android.support.annotation.Nullable;
 import android.support.v4.app.NotificationCompat;
+import android.widget.Toast;
 
 import com.example.lukmanu.examples.MainActivity;
 import com.example.lukmanu.examples.R;
@@ -14,52 +15,37 @@ public class MyBackgroundService extends Service
 {
     private static final int NOTIFICATION_SERVICE = 1;
 
-    int mStartMode;       // indicates how to behave if the service is killed
-    IBinder mBinder;      // interface for clients that bind
-    boolean mAllowRebind; // indicates whether onRebind should be used
-
     @Override
     public void onCreate()
     {
         super.onCreate();
+        Toast.makeText(this, "Servicio creado", Toast.LENGTH_SHORT).show();
     }
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId)
     {
-        showForegroundNotification(getApplicationContext().getResources().getString(R.string.texto_servicio));
+        //Si queremos que se muestre una notificacion mientras esté corriendo nuestro servicio
+//        showForegroundNotification(getApplicationContext().getResources().getString(R.string.texto_servicio));
 
-        // The service is starting, due to a call to startService()
-        return mStartMode;
+        Toast.makeText(this, "Servicio arrancado " + startId, Toast.LENGTH_SHORT).show();
+        return super.onStartCommand(intent, flags, startId);
+    }
+
+    @Override
+    public void onDestroy()
+    {
+        Toast.makeText(this, "Servicio detenido", Toast.LENGTH_SHORT).show();
+
+        // The service is no longer used and is being destroyed
+//        stopForeground(true);
     }
 
     @Nullable
     @Override
     public IBinder onBind(Intent intent)
     {
-        // A client is binding to the service with bindService()
-        return mBinder;
-    }
-
-    @Override
-    public boolean onUnbind(Intent intent)
-    {
-        // All clients have unbound with unbindService()
-        return mAllowRebind;
-    }
-
-    @Override
-    public void onRebind(Intent intent)
-    {
-        // A client is binding to the service with bindService(),
-        // after onUnbind() has already been called
-    }
-
-    @Override
-    public void onDestroy()
-    {
-        // The service is no longer used and is being destroyed
-//        stopForeground(true);
+        return null;
     }
 
     private void showForegroundNotification(String contentText)

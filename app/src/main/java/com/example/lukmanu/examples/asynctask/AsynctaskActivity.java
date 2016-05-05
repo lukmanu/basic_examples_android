@@ -46,6 +46,12 @@ public class AsynctaskActivity extends Activity implements View.OnClickListener
             mTask.cancel(true);
     }
 
+    @Override
+    protected void onDestroy()
+    {
+        super.onDestroy();
+        stopMyAsynctask();
+    }
 
     private void onProgres(Integer value)
     {
@@ -81,15 +87,12 @@ public class AsynctaskActivity extends Activity implements View.OnClickListener
         {
             for (int i = 0; i < 100; i++)
             {
+                //TAREA EN SEGUNDO PLANO
                 try
                 {
-                    long time = 200;
-
-                    Log.d("asynctask", "doInBackground: time: "+time);
-                    Thread.sleep(time);
+                    Thread.sleep(200);
                 } catch (InterruptedException ie)
                 {
-                    ie.printStackTrace();
                 }
                 publishProgress(i);
 
