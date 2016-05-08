@@ -29,6 +29,7 @@
         <activity android:name=".database.DatabaseActivity"/>
         <activity android:name=".asynctask.AsynctaskActivity"/>
         <activity android:name=".services.ServiceActivity"/>
+        <activity android:name=".notifications.NotificationsActivity"/>
 
         <service android:name=".services.MyBackgroundService"/>
     </application>
