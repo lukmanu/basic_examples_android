@@ -14,7 +14,12 @@
     <string name="database_bttn">Ejemplo 11 - SQLite</string>
     <string name="asynctask_bttn">Ejemplo 12 - Asynctask</string>
     <string name="service_bttn">Ejemplo 13 - Service</string>
+    <string name="notifications_bttn">Ejemplo 14 - Notificaciones</string>
 
     <string name="texto_servicio">Servicio iniciado en background</string>
+
+    <string name="notificacion_1_bttn">Lanzar Notificacion Simple</string>
+    <string name="notificacion_2_bttn">Lanzar Notificacion Con Más Datos</string>
+    <string name="notificacion_3_bttn">Lanzar Notificacion Expandible y Acciones</string>
 
 </resources>

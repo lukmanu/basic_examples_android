@@ -11,6 +11,7 @@ import com.example.lukmanu.examples.listview.listview_complejo.ListViewComplejoT
 import com.example.lukmanu.examples.listview.listview_complejo.ListViewComplejoActivity;
 import com.example.lukmanu.examples.listview.listview_simple.ListViewSimple2LinesActivity;
 import com.example.lukmanu.examples.listview.listview_simple.ListViewSimpleActivity;
+import com.example.lukmanu.examples.notifications.NotificationsActivity;
 import com.example.lukmanu.examples.recyclerview.ejemplo2.RecyclerViewActivity;
 import com.example.lukmanu.examples.services.ServiceActivity;
 import com.example.lukmanu.examples.sharedpreferences.SharedPreferencesActivity;
@@ -64,6 +65,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         v = findViewById(R.id.bttn_13);
         if (v != null)
             v.setOnClickListener(this);
+        v = findViewById(R.id.bttn_14);
+        if (v != null)
+            v.setOnClickListener(this);
     }
 
     @Override
@@ -112,6 +116,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.bttn_13:
                 intent = new Intent(this, ServiceActivity.class);
+                break;
+            case R.id.bttn_14:
+                intent = new Intent(this, NotificationsActivity.class);
                 break;
             default:
                 intent = new Intent(this, ListViewSimpleActivity.class);
