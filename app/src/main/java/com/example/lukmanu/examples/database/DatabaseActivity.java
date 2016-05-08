@@ -52,7 +52,6 @@ public class DatabaseActivity extends Activity implements View.OnClickListener
             do
             {
                 stringBuilder.append(c.getString(1)).append("\n");
-                c.moveToNext();
             } while (c.moveToNext());
             //Cerramos la base de datos
 
