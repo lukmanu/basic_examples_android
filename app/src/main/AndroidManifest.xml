@@ -27,6 +27,10 @@
         <activity android:name=".recyclerview.ejemplo5.RecyclerViewActivity"/>
         <activity android:name=".sharedpreferences.SharedPreferencesActivity"/>
         <activity android:name=".database.DatabaseActivity"/>
+        <activity android:name=".asynctask.AsynctaskActivity"/>
+        <activity android:name=".services.ServiceActivity"/>
+
+        <service android:name=".services.MyBackgroundService"/>
     </application>
 
 </manifest>
