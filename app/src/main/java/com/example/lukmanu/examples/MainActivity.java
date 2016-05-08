@@ -5,12 +5,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.lukmanu.examples.asynctask.AsynctaskActivity;
 import com.example.lukmanu.examples.database.DatabaseActivity;
 import com.example.lukmanu.examples.listview.listview_complejo.ListViewComplejoTypesActivity;
 import com.example.lukmanu.examples.listview.listview_complejo.ListViewComplejoActivity;
 import com.example.lukmanu.examples.listview.listview_simple.ListViewSimple2LinesActivity;
 import com.example.lukmanu.examples.listview.listview_simple.ListViewSimpleActivity;
 import com.example.lukmanu.examples.recyclerview.ejemplo2.RecyclerViewActivity;
+import com.example.lukmanu.examples.services.ServiceActivity;
 import com.example.lukmanu.examples.sharedpreferences.SharedPreferencesActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener
@@ -56,6 +58,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         v = findViewById(R.id.bttn_11);
         if (v != null)
             v.setOnClickListener(this);
+        v = findViewById(R.id.bttn_12);
+        if (v != null)
+            v.setOnClickListener(this);
+        v = findViewById(R.id.bttn_13);
+        if (v != null)
+            v.setOnClickListener(this);
     }
 
     @Override
@@ -98,6 +106,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.bttn_11:
                 intent = new Intent(this, DatabaseActivity.class);
+                break;
+            case R.id.bttn_12:
+                intent = new Intent(this, AsynctaskActivity.class);
+                break;
+            case R.id.bttn_13:
+                intent = new Intent(this, ServiceActivity.class);
                 break;
             default:
                 intent = new Intent(this, ListViewSimpleActivity.class);

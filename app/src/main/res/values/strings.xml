@@ -12,5 +12,9 @@
     <string name="recyclerview_5_bttn">Ejemplo 9 - Recycler View - Grid Layout</string>
     <string name="sharedpreferences_bttn">Ejemplo 10 - SharedPreferences</string>
     <string name="database_bttn">Ejemplo 11 - SQLite</string>
+    <string name="asynctask_bttn">Ejemplo 12 - Asynctask</string>
+    <string name="service_bttn">Ejemplo 13 - Service</string>
+
+    <string name="texto_servicio">Servicio iniciado en background</string>
 
 </resources>
