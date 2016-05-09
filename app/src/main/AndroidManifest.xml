@@ -2,6 +2,8 @@
 <manifest package="com.example.lukmanu.examples"
           xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <uses-permission android:name="android.permission.BATTERY_STATS"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -30,8 +32,17 @@
         <activity android:name=".asynctask.AsynctaskActivity"/>
         <activity android:name=".services.ServiceActivity"/>
         <activity android:name=".notifications.NotificationsActivity"/>
+        <activity android:name=".broadcast.BroadcastActivity"/>
 
         <service android:name=".services.MyBackgroundService"/>
+
+        <receiver android:name=".broadcast.BroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BATTERY_CHANGED"
+                        android:exported="true"
+                        android:enabled="true" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

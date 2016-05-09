@@ -112,6 +112,12 @@
             android:layout_height="wrap_content"
             android:text="@string/notifications_bttn"
             />
+        <Button
+            android:id="@+id/bttn_15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/broadcast_bttn"
+            />
 
     </LinearLayout>
 </ScrollView>
