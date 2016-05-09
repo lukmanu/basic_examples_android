@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.example.lukmanu.examples.asynctask.AsynctaskActivity;
+import com.example.lukmanu.examples.broadcast.BroadcastActivity;
 import com.example.lukmanu.examples.database.DatabaseActivity;
 import com.example.lukmanu.examples.listview.listview_complejo.ListViewComplejoTypesActivity;
 import com.example.lukmanu.examples.listview.listview_complejo.ListViewComplejoActivity;
@@ -68,6 +69,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         v = findViewById(R.id.bttn_14);
         if (v != null)
             v.setOnClickListener(this);
+        v = findViewById(R.id.bttn_15);
+        if (v != null)
+            v.setOnClickListener(this);
     }
 
     @Override
@@ -119,6 +123,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.bttn_14:
                 intent = new Intent(this, NotificationsActivity.class);
+                break;
+            case R.id.bttn_15:
+                intent = new Intent(this, BroadcastActivity.class);
                 break;
             default:
                 intent = new Intent(this, ListViewSimpleActivity.class);

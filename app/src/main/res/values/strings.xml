@@ -15,6 +15,7 @@
     <string name="asynctask_bttn">Ejemplo 12 - Asynctask</string>
     <string name="service_bttn">Ejemplo 13 - Service</string>
     <string name="notifications_bttn">Ejemplo 14 - Notificaciones</string>
+    <string name="broadcast_bttn">Ejemplo 15 - Broadcast Battery</string>
 
     <string name="texto_servicio">Servicio iniciado en background</string>
 
